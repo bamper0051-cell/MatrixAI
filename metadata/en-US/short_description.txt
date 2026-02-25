@@ -1,1 +1,1 @@
-SmolChat lets users run LLMs locally on Android via llama.cpp
+Matrix AI lets users run AI models locally on Android with cloud AI agent support

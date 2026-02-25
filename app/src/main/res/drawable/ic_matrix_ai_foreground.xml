@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle with glow -->
+    <path
+        android:pathData="M54,54m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0"
+        android:fillColor="#001A00"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="1.5"/>
+
+    <!-- Circuit board pattern (decorative lines) -->
+    <path
+        android:pathData="M20,30 L30,30 L30,25"
+        android:strokeColor="#004D00"
+        android:strokeWidth="0.8"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M88,30 L78,30 L78,25"
+        android:strokeColor="#004D00"
+        android:strokeWidth="0.8"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M20,78 L30,78 L30,83"
+        android:strokeColor="#004D00"
+        android:strokeWidth="0.8"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M88,78 L78,78 L78,83"
+        android:strokeColor="#004D00"
+        android:strokeWidth="0.8"
+        android:fillColor="#00000000"/>
+
+    <!-- Falling code streams (left) -->
+    <path
+        android:pathData="M28,20 L28,38"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.3"/>
+    <path
+        android:pathData="M35,15 L35,42"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.2"/>
+
+    <!-- Falling code streams (right) -->
+    <path
+        android:pathData="M73,18 L73,40"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.2"/>
+    <path
+        android:pathData="M80,22 L80,45"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.3"/>
+
+    <!-- Falling code streams (bottom) -->
+    <path
+        android:pathData="M30,68 L30,90"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.25"/>
+    <path
+        android:pathData="M78,66 L78,88"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.25"/>
+
+    <!-- Brain/chip outline -->
+    <path
+        android:pathData="M38,38 L70,38 L70,70 L38,70 Z"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="2"
+        android:fillColor="#000D00"/>
+
+    <!-- Chip pins top -->
+    <path android:pathData="M45,38 L45,34" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+    <path android:pathData="M54,38 L54,34" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+    <path android:pathData="M63,38 L63,34" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+
+    <!-- Chip pins bottom -->
+    <path android:pathData="M45,70 L45,74" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+    <path android:pathData="M54,70 L54,74" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+    <path android:pathData="M63,70 L63,74" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+
+    <!-- Chip pins left -->
+    <path android:pathData="M38,47 L34,47" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+    <path android:pathData="M38,54 L34,54" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+    <path android:pathData="M38,61 L34,61" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+
+    <!-- Chip pins right -->
+    <path android:pathData="M70,47 L74,47" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+    <path android:pathData="M70,54 L74,54" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+    <path android:pathData="M70,61 L74,61" android:strokeColor="#00FF41" android:strokeWidth="1.5" android:fillColor="#00000000"/>
+
+    <!-- "AI" text inside chip -->
+    <!-- Letter A -->
+    <path
+        android:pathData="M44,63 L49,47 L54,63 M46,57 L52,57"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- Letter I -->
+    <path
+        android:pathData="M59,47 L59,63"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"/>
+    <path
+        android:pathData="M56,47 L62,47"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"/>
+    <path
+        android:pathData="M56,63 L62,63"
+        android:strokeColor="#00FF41"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"/>
+
+    <!-- Inner glow dot -->
+    <path
+        android:pathData="M54,54m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
+        android:fillColor="#39FF14"/>
+
+</vector>

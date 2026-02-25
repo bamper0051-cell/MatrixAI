@@ -1,7 +1,13 @@
-SmolChat is an open-source Android app which allows users to download any SLM/LLM available in the GGUF format and interact with them via a chat interface. The inference works locally, on-device respecting the privacy of your chats/data.
+Matrix AI is an Android app with a sleek Matrix-inspired interface (green digital rain on black) that lets you download and run AI language models locally on your device. Powered by llama.cpp, it supports any GGUF-format model for private, on-device inference.
 
-The app provides a simple user interface to manage chats, where each chat is associated with one of the downloaded models. Inference parameters like temperature, min-p and the system prompt could also be modified.
+Key Features:
+- Matrix-style UI with falling green code rain animation
+- On-device AI inference - your data stays private
+- Cloud AI agent integration (OpenAI, Grok, Claude, DeepSeek, Gemini)
+- Download models directly from HuggingFace
+- Customizable inference parameters (temperature, min-p, context size)
+- Task templates for quick AI actions (summarize, rewrite, etc.)
+- Chat management with folders
+- Beautiful Matrix-themed animations for all states
 
-SLMs have also been useful for smaller, downstream tasks such as text summarization and rewriting. Considering this ability, the app allows for the creation of 'tasks' which are lightweight chats with predefined system prompts and a model of choice. Just tap 'New Task' and you can summarize, rewrite your text easily.
-
-GitHub Project: https://github.com/shubham0204/SmolChat-Android
+Matrix AI also supports cloud AI agents. Configure API keys for OpenAI GPT, xAI Grok, Anthropic Claude, DeepSeek, and Google Gemini to access cloud-based AI models alongside local inference.

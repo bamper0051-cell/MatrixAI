@@ -65,6 +65,7 @@ import compose.icons.FeatherIcons
 import compose.icons.feathericons.ChevronDown
 import compose.icons.feathericons.ChevronRight
 import compose.icons.feathericons.FolderPlus
+import compose.icons.feathericons.Cpu
 import compose.icons.feathericons.List
 import compose.icons.feathericons.MoreVertical
 import compose.icons.feathericons.Plus
@@ -79,6 +80,7 @@ import io.shubham0204.smollmandroid.ui.components.noRippleClickable
 import io.shubham0204.smollmandroid.ui.preview.dummyChats
 import io.shubham0204.smollmandroid.ui.preview.dummyFolders
 import io.shubham0204.smollmandroid.ui.screens.chat.dialogs.createFolderOptionsDialog
+import io.shubham0204.smollmandroid.ui.screens.ai_agents.AIAgentsActivity
 import io.shubham0204.smollmandroid.ui.screens.manage_tasks.ManageTasksActivity
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -194,6 +196,7 @@ private fun ChatsAndFoldersList(
     onUpdateFolder: (Folder) -> Unit,
     onAddFolder: (String) -> Unit,
 ) {
+    val localContext = LocalContext.current
     Column {
         Row(
             modifier = Modifier
@@ -208,6 +211,30 @@ private fun ChatsAndFoldersList(
             )
             Text(
                 stringResource(R.string.chat_drawer_manage_tasks),
+                style = MaterialTheme.typography.labelLarge,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp),
+            )
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable {
+                    Intent(localContext, AIAgentsActivity::class.java).also {
+                        localContext.startActivity(it)
+                    }
+                },
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Icon(
+                FeatherIcons.Cpu,
+                contentDescription = "AI Agents",
+                tint = MaterialTheme.colorScheme.secondary,
+            )
+            Text(
+                stringResource(R.string.ai_agents_title),
                 style = MaterialTheme.typography.labelLarge,
                 modifier = Modifier
                     .fillMaxWidth()

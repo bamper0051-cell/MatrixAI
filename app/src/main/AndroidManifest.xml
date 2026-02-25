@@ -10,6 +10,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -28,7 +29,7 @@
         </activity>
 
         <activity
-            android:label="💬 LLM"
+            android:label="Matrix AI"
             android:name=".ui.screens.chat.ChatActivity"
             android:exported="true">
             <!-- This intent-filter is used to receive text from other apps-->
@@ -43,6 +44,8 @@
         <activity android:name=".ui.screens.model_download.DownloadModelActivity"/>
 
         <activity android:name=".ui.screens.manage_tasks.ManageTasksActivity"/>
+
+        <activity android:name=".ui.screens.ai_agents.AIAgentsActivity"/>
     </application>
 
 </manifest>

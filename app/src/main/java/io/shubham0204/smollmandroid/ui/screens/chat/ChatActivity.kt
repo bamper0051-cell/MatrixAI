@@ -126,6 +126,8 @@ import io.shubham0204.smollmandroid.ui.screens.chat.dialogs.ChatMoreOptionsPopup
 import io.shubham0204.smollmandroid.ui.screens.chat.dialogs.FolderOptionsDialog
 import io.shubham0204.smollmandroid.ui.screens.chat.dialogs.createChatMessageOptionsDialog
 import io.shubham0204.smollmandroid.ui.screens.manage_tasks.ManageTasksActivity
+import io.shubham0204.smollmandroid.ui.theme.MatrixDarkBg
+import io.shubham0204.smollmandroid.ui.theme.MatrixGreen
 import io.shubham0204.smollmandroid.ui.theme.SmolLMAndroidTheme
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
