@@ -5,6 +5,7 @@ include(":smolvectordb")
 
 pluginManagement {
     repositories {
+        maven { url = java.net.URI("https://dl.google.com/android/maven2/") }
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
