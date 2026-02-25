@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Matrix AI Colors -->
+    <color name="matrix_green">#00FF41</color>
+    <color name="matrix_green_dark">#00CC33</color>
+    <color name="matrix_green_dim">#005C13</color>
+    <color name="matrix_black">#000000</color>
+    <color name="matrix_bg">#010D01</color>
+    <color name="matrix_surface">#020F02</color>
+    <color name="matrix_surface_variant">#041A04</color>
+    <color name="matrix_border">#003300</color>
+    <color name="matrix_green_glow">#33FF41</color>
+    <color name="matrix_green_bright">#39FF14</color>
 </resources>

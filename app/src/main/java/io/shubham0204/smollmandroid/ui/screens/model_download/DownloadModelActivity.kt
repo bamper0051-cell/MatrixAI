@@ -30,10 +30,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.background
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.ui.graphics.Color
+import io.shubham0204.smollmandroid.ui.theme.MatrixBg
+import io.shubham0204.smollmandroid.ui.theme.MatrixGreen
+import io.shubham0204.smollmandroid.ui.theme.MatrixSurface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -52,8 +58,11 @@ import io.shubham0204.smollmandroid.R
 import io.shubham0204.smollmandroid.ui.components.AppAlertDialog
 import io.shubham0204.smollmandroid.ui.components.AppBarTitleText
 import io.shubham0204.smollmandroid.ui.components.AppProgressDialog
+import io.shubham0204.smollmandroid.ui.components.MatrixRainBackground
+import io.shubham0204.smollmandroid.ui.components.ProgressAnimationType
 import io.shubham0204.smollmandroid.ui.components.hideProgressDialog
 import io.shubham0204.smollmandroid.ui.components.setProgressDialogTitle
+import io.shubham0204.smollmandroid.ui.components.setProgressDialogType
 import io.shubham0204.smollmandroid.ui.components.showProgressDialog
 import io.shubham0204.smollmandroid.ui.screens.chat.ChatActivity
 import io.shubham0204.smollmandroid.ui.theme.SmolLMAndroidTheme
@@ -115,7 +124,8 @@ class DownloadModelActivity : ComponentActivity() {
                             viewModel,
                             onBackClicked = { navController.navigateUp() },
                             onModelClick = { modelId ->
-                                setProgressDialogTitle("Getting Model Data")
+                                setProgressDialogTitle("> ПОЛУЧЕНИЕ ДАННЫХ МОДЕЛИ")
+                                setProgressDialogType(ProgressAnimationType.LOADING)
                                 showProgressDialog()
                                 viewModel.fetchModelInfoAndTree(
                                     modelId,
@@ -163,13 +173,22 @@ class DownloadModelActivity : ComponentActivity() {
         SmolLMAndroidTheme {
             Scaffold(
                 modifier = Modifier.fillMaxSize(),
+                containerColor = MatrixBg,
                 topBar = {
                     TopAppBar(
-                        title = { AppBarTitleText(stringResource(R.string.add_new_model_title)) }
+                        title = { AppBarTitleText(stringResource(R.string.add_new_model_title)) },
+                        colors = TopAppBarDefaults.topAppBarColors(
+                            containerColor = MatrixSurface,
+                        ),
                     )
                 },
             ) { innerPadding ->
+                Box(modifier = Modifier.fillMaxSize()) {
+                    MatrixRainBackground(modifier = Modifier.fillMaxSize())
+                    Box(modifier = Modifier.fillMaxSize().background(Color(0xCC010D01)))
+                }
                 Surface(
+                    color = Color.Transparent,
                     modifier = Modifier
                         .padding(innerPadding)
                         .verticalScroll(rememberScrollState())
@@ -211,7 +230,7 @@ class DownloadModelActivity : ComponentActivity() {
                 }
                 AppProgressDialog()
                 AppAlertDialog()
-            }
+                }
         }
     }
 

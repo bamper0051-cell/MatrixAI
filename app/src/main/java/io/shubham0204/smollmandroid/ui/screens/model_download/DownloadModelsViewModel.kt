@@ -33,9 +33,11 @@ import io.shubham0204.smollm.SmolLM
 import io.shubham0204.smollmandroid.R
 import io.shubham0204.smollmandroid.data.AppDB
 import io.shubham0204.smollmandroid.data.HFModelsAPI
+import io.shubham0204.smollmandroid.ui.components.ProgressAnimationType
 import io.shubham0204.smollmandroid.ui.components.hideProgressDialog
 import io.shubham0204.smollmandroid.ui.components.setProgressDialogText
 import io.shubham0204.smollmandroid.ui.components.setProgressDialogTitle
+import io.shubham0204.smollmandroid.ui.components.setProgressDialogType
 import io.shubham0204.smollmandroid.ui.components.showProgressDialog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -69,7 +71,7 @@ class DownloadModelsViewModel(
             DownloadManager.Request(modelUrl.toUri())
                 .setTitle(fileName)
                 .setDescription(
-                    "The GGUF model will be downloaded on your device for use with SmolChat."
+                    "Matrix AI: Загрузка GGUF модели на устройство..."
                 )
                 .setMimeType("application/octet-stream")
                 .setAllowedNetworkTypes(
@@ -98,10 +100,11 @@ class DownloadModelsViewModel(
             fileName = cursor.getString(nameIndex)
         }
         if (fileName.isNotEmpty()) {
-            setProgressDialogTitle(context.getString(R.string.dialog_progress_copy_model_title))
+            setProgressDialogTitle("> " + context.getString(R.string.dialog_progress_copy_model_title))
             setProgressDialogText(
                 context.getString(R.string.dialog_progress_copy_model_text, fileName)
             )
+            setProgressDialogType(ProgressAnimationType.INSTALLING)
             showProgressDialog()
             CoroutineScope(Dispatchers.IO).launch {
                 context.contentResolver.openInputStream(uri).use { inputStream ->

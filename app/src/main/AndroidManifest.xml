@@ -43,6 +43,8 @@
         <activity android:name=".ui.screens.model_download.DownloadModelActivity"/>
 
         <activity android:name=".ui.screens.manage_tasks.ManageTasksActivity"/>
+
+        <activity android:name=".ui.screens.ai_agents.AIAgentsActivity"/>
     </application>
 
 </manifest>
